@@ -1,0 +1,358 @@
+@font-face {
+  font-family: "Roboto Light";
+  src: url("../fonts/Roboto-Light.eot");
+  src: url("../fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Light.woff2") format("woff2"), url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.ttf") format("truetype"), url("../fonts/Roboto-Light.svg#Roboto_Light") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Slab Light";
+  src: url("../fonts/Roboto-Slab-Light.eot");
+  src: url("../fonts/Roboto-Slab-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Slab-Light.woff2") format("woff2"), url("../fonts/Roboto-Slab-Light.woff") format("woff"), url("../fonts/Roboto-Slab-Light.ttf") format("truetype"), url("../fonts/Roboto-Slab-Light.svg#Roboto_Slab_Light") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Slab Bold";
+  src: url("../fonts/Roboto-Slab-Bold.eot");
+  src: url("../fonts/Roboto-Slab-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Slab-Bold.woff2") format("woff2"), url("../fonts/Roboto-Slab-Bold.woff") format("woff"), url("../fonts/Roboto-Slab-Bold.ttf") format("truetype"), url("../fonts/Roboto-Slab-Bold.svg#Roboto_Slab_Bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pier Sans Bold";
+  src: url("../fonts/Pier-Sans-Bold.eot");
+  src: url("../fonts/Pier-Sans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Pier-Sans-Bold.woff2") format("woff2"), url("../fonts/Pier-Sans-Bold.woff") format("woff"), url("../fonts/Pier-Sans-Bold.ttf") format("truetype"), url("../fonts/Pier-Sans-Bold.svg#Pier_Sans_Bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.fade {
+  opacity: 50%;
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+}
+
+.show {
+  opacity: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 55.5%;
+}
+
+body {
+  background-image: linear-gradient(to right bottom, #37cb99, #007fd4);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.items-select {
+  font-size: 1.6rem;
+  font-family: "Roboto Slab Bold";
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.items-select__label, .items-select__dropdown-placeholder {
+  color: #009588;
+}
+.items-select__dropdown-placeholder {
+  display: inline-block;
+}
+.items-select__label {
+  text-transform: uppercase;
+}
+.items-select__dropdown-group {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  padding: 0.6rem 1rem;
+  margin-left: 2rem;
+  transition: all 0.4s;
+}
+.items-select__dropdown-group--active {
+  cursor: pointer;
+  background-color: #37CB99;
+}
+.items-select__dropdown-group--active > p {
+  color: #fff;
+}
+.items-select__dropdown-group--active > span svg {
+  fill: #fff;
+}
+.items-select__icon {
+  margin-left: 5rem;
+  position: relative;
+}
+.items-select__icon svg {
+  fill: #009588;
+  width: 1.5rem;
+  position: absolute;
+  top: 0.6rem;
+  right: 0rem;
+}
+
+.dropdown {
+  position: absolute;
+  top: 3.4rem;
+  right: 0;
+  z-index: 300;
+  min-width: 15rem;
+  transition: all 0.4s;
+  height: 10px;
+  transform-origin: top right;
+}
+
+.dropdown-1 {
+  font-family: "Roboto Slab Light";
+  transition: all 0.4s;
+}
+.dropdown-1__list {
+  background-color: #fff;
+  padding: 0.5rem 0;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  color: #4DD0E1;
+}
+.dropdown-1__items {
+  list-style: none;
+  padding: 1.3rem;
+  transition: all 0.4s;
+}
+.dropdown-1__items:hover {
+  background-color: #37CB99;
+  cursor: pointer;
+  color: #fff;
+}
+
+.heading-primary {
+  padding: 1rem 0;
+  background-color: #014C40;
+}
+.heading-primary__heading {
+  font-family: "Roboto Slab Bold";
+  font-size: 3rem;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.heading-super-big__heading {
+  font-family: "Pier Sans Bold";
+  font-size: 15rem;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.heading-tertiary__heading {
+  font-family: "Roboto Light";
+  font-size: 2.4rem;
+  text-align: center;
+  color: #fff;
+}
+
+.heading-secondary__heading {
+  font-family: "Roboto Slab Bold";
+  font-size: 4rem;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.boxed-element-1 {
+  background-color: #00E676;
+  border: 1rem solid #4BAF50;
+  padding: 3rem 0;
+}
+
+.boxed-element-2 {
+  background-color: #00695C;
+  padding: 2rem 0;
+}
+
+.boxed-element-2a {
+  background-color: #009588;
+  padding: 2rem 0;
+}
+
+.btn__btn-primary {
+  position: relative;
+  border: none;
+  font-family: "Roboto Slab Light";
+  text-transform: uppercase;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  padding: 1.5rem 0;
+  font-size: 1.6rem;
+  width: 80%;
+  color: #00695C;
+  background-size: 240%;
+  background-position: 83%;
+  transition: all 0.4s;
+}
+.btn__btn-primary:not(:last-child) {
+  margin-bottom: 1.3rem;
+}
+.btn__btn-primary-hover:hover {
+  cursor: pointer;
+  background-position: 0;
+  color: #fff;
+}
+.btn__btn-new-game {
+  background-image: linear-gradient(270deg, transparent 0%, transparent 50%, #4DD0E1 50%);
+}
+.btn__btn-roll-dice {
+  background-image: linear-gradient(270deg, transparent 0%, transparent 50%, #F67C46 50%);
+}
+.btn__btn-hold-dice {
+  background-image: linear-gradient(270deg, transparent 0%, transparent 50%, #37CB99 50%);
+}
+
+.dice-game__wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+}
+.dice-game__container {
+  width: 100rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.dice-game__initiators {
+  display: flex;
+  justify-content: center;
+}
+.dice-game__initiators-wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  width: 55%;
+  padding: 2rem;
+}
+.dice-game__game-block {
+  display: flex;
+  margin-top: 6rem;
+  position: relative;
+}
+.dice-game__game-block-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+}
+.dice-game__player-block {
+  width: 40%;
+  z-index: 100;
+  transition: all 0.4s;
+}
+.dice-game__game-score-board {
+  background-color: #4DD0E1;
+  height: 58rem;
+  position: relative;
+}
+.dice-game__message-block {
+  position: absolute;
+  bottom: 20rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: all 0.4s;
+}
+.dice-game__message-block-wrapper {
+  width: 85%;
+}
+.dice-game__rolled {
+  position: absolute;
+  bottom: 13rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.dice-game__player-current-score {
+  width: 100%;
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.dice-game__player-current-score-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+}
+.dice-game__player-current-score--label {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dice-game__player-current-score--number {
+  width: 30%;
+}
+.dice-game__game-controls-block {
+  width: 20%;
+  background-color: #fff;
+  height: 70.5rem;
+  position: absolute;
+  top: -3rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+  z-index: 200;
+}
+.dice-game__dice-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+.dice-game__dice-item {
+  width: 80%;
+  transition: all 0.4s;
+}
+.dice-game__rule-info {
+  position: absolute;
+  bottom: 35%;
+  width: 100%;
+  padding: 0 2rem;
+  transition: all 0.4s;
+}
+.dice-game__rule-info-paragraph {
+  font-size: 1.5rem;
+  font-family: "Roboto Slab Light";
+}
+.dice-game__game-control-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 4rem;
+  width: 100%;
+}
+
+.player-1, .player-2 {
+  position: absolute;
+}
+
+.player-1 {
+  left: 0;
+}
+
+.player-2 {
+  right: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

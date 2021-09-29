@@ -1,0 +1,29 @@
+$color-white: #fff;
+$color-black: #000; 
+
+$color-1a: #014C40;
+$color-1b: #00695C;
+$color-1c: #009588;
+$color-1d: #4DD0E1;
+$color-1e: #007FD4;
+$color-2a: #00E676;
+$color-2b: #4BAF50;
+$color-2c: #41E6A9;
+$color-2d: #37CB99;
+$color-3a: #F67C46;
+
+$box-shadow-1: 0 0 2rem rgba(0, 0, 0, 0.3);
+$box-shadow-2: 0 0 1rem rgba(0, 0, 0, 0.2);
+
+// FADE ELEMENT
+.fade { opacity: 50%; }
+
+// HIDE ELEMENT
+.hide { 
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+}
+
+// SHOW ELEMENT 
+.show {  opacity: 100%; }

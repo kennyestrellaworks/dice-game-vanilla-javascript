@@ -1,0 +1,174 @@
+// ITEMS SELECT
+.items-select {
+    font-size: 1.6rem;
+    font-family: "Roboto Slab Bold";    
+    display: flex;
+    align-items: center;
+    position: relative;    
+    &__label, &__dropdown-placeholder { color: $color-1c; }
+    &__dropdown-placeholder { display: inline-block; }
+    &__label { text-transform: uppercase; }
+    &__dropdown-group { 
+        // border: 1px solid $color-1b; 
+        box-shadow: $box-shadow-2;
+        padding: .6rem 1rem;
+        margin-left: 2rem;
+        transition: all .4s;
+        &--active {
+            cursor: pointer;
+            background-color: $color-2d;            
+            //transform: scale(1.05);
+            & > p { color: $color-white; }
+            & > span svg { fill: $color-white; }
+        }
+    }
+    &__icon { 
+        margin-left: 5rem;
+        position: relative;
+        & svg { 
+            fill: $color-1c; 
+            width: 1.5rem;
+            position: absolute;
+            top: .6rem;
+            right: 0rem;
+        }
+    }
+}
+
+// DROPDOWN
+.dropdown {
+    position: absolute;
+    top: 3.4rem;
+    right: 0;
+    z-index: 300;
+    min-width: 15rem;
+    transition: all .4s; 
+    height: 10px;
+    transform-origin: top right;    
+}
+.dropdown-1 {
+    font-family: "Roboto Slab Light";
+    transition: all .4s;    
+    &__list {
+        background-color: $color-white;
+        padding: .5rem 0;
+        box-shadow: $box-shadow-2;
+        color: $color-1d;
+    } 
+    &__items {
+        list-style: none;
+        padding: 1.3rem;
+        transition: all .4s;
+        &:hover {
+            background-color: $color-2d;
+            cursor: pointer;
+            color: $color-white;
+        }
+    }   
+}
+
+// HEADING
+.heading-primary {
+    padding: 1rem 0;
+    background-color: $color-1a;
+    &__heading {
+        font-family: "Roboto Slab Bold";
+        font-size: 3rem;
+        text-align: center;
+        color: $color-white;
+        text-transform: uppercase;
+    }
+}
+.heading-super-big {
+    &__heading {
+        font-family: "Pier Sans Bold";
+        font-size: 15rem;
+        text-align: center;
+        color: $color-white;
+        text-transform: uppercase;
+    }
+}
+.heading-tertiary {
+    &__heading {
+        font-family: "Roboto Light";
+        font-size: 2.4rem;
+        text-align: center;
+        color: $color-white;
+    }
+}
+.heading-secondary {
+    &__heading {
+        font-family: "Roboto Slab Bold";
+        font-size: 4rem;
+        text-align: center;
+        color: $color-white;
+        text-transform: uppercase;
+    }
+}
+
+// BOXED CONTENT
+.boxed-element-1 {
+    background-color: $color-2a;
+    border: 1rem solid $color-2b;
+    padding: 3rem 0;    
+}
+.boxed-element-2 {
+    background-color: $color-1b;
+    padding: 2rem 0;
+}
+.boxed-element-2a {
+    background-color: $color-1c;
+    padding: 2rem 0;
+}
+
+// BUTTONS
+.btn {
+    &__btn-primary {
+        position: relative;
+        border: none;        
+        font-family: "Roboto Slab Light";
+        text-transform: uppercase;
+        box-shadow: 0 0 1rem rgb(0 0 0 / 20%);
+        padding: 1.5rem 0;
+        font-size: 1.6rem;
+        width: 80%;
+        color: $color-1b;
+        background-size: 240%;
+        background-position: 83%;
+        transition: all .4s;
+        &:not(:last-child) {
+            margin-bottom: 1.3rem;
+        }
+        &-hover {
+            &:hover {
+                cursor: pointer;
+                background-position: 0;
+                color: $color-white;
+            }
+        }
+    }    
+    &__btn-new-game {
+        background-image: linear-gradient(
+            270deg, 
+            transparent 0%,
+            transparent 50%,
+            $color-1d 50%
+        );
+    }
+    &__btn-roll-dice {
+        background-image: linear-gradient(
+            270deg, 
+            transparent 0%,
+            transparent 50%,
+            $color-3a 50%
+        );
+    }
+    &__btn-hold-dice {
+        background-image: linear-gradient(
+            270deg, 
+            transparent 0%,
+            transparent 50%,
+            $color-2d 50%
+        );
+    }
+}

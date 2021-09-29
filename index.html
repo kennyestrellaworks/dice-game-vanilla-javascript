@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg" sizes="32x32" href="images/favicon.svg">
+    <title>Dice Game Me</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="dice-game">
+        <div class="dice-game__wrapper">
+            <div class="dice-game__container">
+                <div class="dice-game__initiators">
+                    <div class="dice-game__initiators-wrapper">
+                        <div class="items-select">
+                            <div class="items-select__label">dice</div>
+                            <div class="items-select__dropdown">
+                                <div class="items-select__dropdown-group">
+                                    <p class="items-select__dropdown-placeholder">1</p>
+                                    <span class="items-select__icon">
+                                        <svg version="1.1"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12 8" xml:space="preserve">
+                                            <path id="Polygon_1" d="M6,8L0,0h12L6,8z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="dropdown hide">
+                                    <div class="dropdown-1 dropdown__container">
+                                        <ul class="dropdown-1__list dice-game__initiators-dropdown" data-name="dice"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items-select">
+                            <div class="items-select__label">winning score</div>
+                            <div class="items-select__dropdown">
+                                <div class="items-select__dropdown-group">
+                                    <p class="items-select__dropdown-placeholder">100</p>
+                                    <span class="items-select__icon">
+                                        <svg version="1.1"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12 8" xml:space="preserve">
+                                            <path id="Polygon_1" d="M6,8L0,0h12L6,8z"/>
+                                        </svg>
+                                    </span>
+                                </div>  
+                                <div class="dropdown hide">
+                                    <div class="dropdown-1 dropdown__container">
+                                        <ul class="dropdown-1__list dice-game__initiators-dropdown" data-name="winning-score"></ul>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>                
+                <div class="dice-game__game-block">
+                    <div class="dice-game__game-block-wrapper">
+                        <div class="dice-game__player-block player-1">
+                            <div class="heading-primary">
+                                <h1 class="heading-primary__heading">player 1</h1>                            
+                            </div>
+                            <div class="dice-game__game-score-board">
+                                <div class="heading-super-big dice-game__player-score">
+                                    <h1 class="heading-super-big__heading">0</h1>                            
+                                </div>
+                                <div class="dice-game__message-block hide">
+                                    <div class="boxed-element-1 dice-game__message-block-wrapper">
+                                        <div class="heading-tertiary">
+                                            <h1 class="heading-tertiary__heading">Congratulations!</h1>                            
+                                        </div>
+                                        <div class="heading-secondary">
+                                            <h1 class="heading-secondary__heading">you win!</h1>                            
+                                        </div>                                
+                                    </div>
+                                </div>                            
+                                <div class="dice-game__rolled">
+                                    <div class="heading-tertiary">
+                                        <h1 class="heading-tertiary__heading"></h1>                            
+                                    </div>
+                                </div>
+                                <div class="dice-game__player-current-score">
+                                    <div class="dice-game__player-current-score-wrapper">
+                                        <div class="boxed-element-2 dice-game__player-current-score--label">
+                                            <div class="heading-tertiary">
+                                                <h1 class="heading-tertiary__heading">Current Score</h1>                            
+                                            </div>
+                                        </div>
+                                        <div class="boxed-element-2a dice-game__player-current-score--number">
+                                            <div class="heading-secondary">
+                                                <h1 class="heading-secondary__heading">0</h1>                            
+                                            </div>
+                                        </div>                                    
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dice-game__game-controls-block">
+                            <div class="dice-game__dice-container"></div>
+                            <div class="dice-game__rule-info hide">
+                                <p class="dice-game__rule-info-paragraph">The quick brown fox jumps over the lazy dog.</p>
+                            </div>
+                            <div class="dice-game__game-control-buttons">
+                                <button class="btn btn__btn-primary btn__btn-new-game">new game</button>
+                                <button class="btn btn__btn-primary btn__btn-roll-dice">roll dice</button>
+                                <button class="btn btn__btn-primary btn__btn-hold-dice">hold dice</button>                               
+                            </div>
+                        </div>
+                        <div class="dice-game__player-block player-2">
+                            <div class="heading-primary">
+                                <h1 class="heading-primary__heading">player 2</h1>                            
+                            </div>
+                            <div class="dice-game__game-score-board">
+                                <div class="heading-super-big dice-game__player-score">
+                                    <h1 class="heading-super-big__heading">0</h1>                            
+                                </div>
+                                <div class="dice-game__message-block hide">
+                                    <div class="boxed-element-1 dice-game__message-block-wrapper">
+                                        <div class="heading-tertiary">
+                                            <h1 class="heading-tertiary__heading">Congratulations!</h1>                            
+                                        </div>
+                                        <div class="heading-secondary">
+                                            <h1 class="heading-secondary__heading">you win!</h1>                            
+                                        </div>                                
+                                    </div>
+                                </div>                            
+                                <div class="dice-game__rolled">
+                                    <div class="heading-tertiary">
+                                        <h1 class="heading-tertiary__heading"></h1>                            
+                                    </div>
+                                </div>
+                                <div class="dice-game__player-current-score">
+                                    <div class="dice-game__player-current-score-wrapper">
+                                        <div class="boxed-element-2 dice-game__player-current-score--label">
+                                            <div class="heading-tertiary">
+                                                <h1 class="heading-tertiary__heading">Current Score</h1>                            
+                                            </div>
+                                        </div>
+                                        <div class="boxed-element-2a dice-game__player-current-score--number">
+                                            <div class="heading-secondary">
+                                                <h1 class="heading-secondary__heading">0</h1>                            
+                                            </div>
+                                        </div>                                    
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+.dice-game {
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 8rem;
+    }
+    &__container {
+        width: 100rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    &__initiators {
+        display: flex;
+        justify-content: center;
+    }
+    &__initiators-wrapper {
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        width: 55%;
+        padding: 2rem;
+    }
+    &__game-block {
+        display: flex;
+        margin-top: 6rem;
+        position: relative;
+        &-wrapper {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            position: relative;
+        }
+    }
+    &__player-block {
+        width: 40%;
+        z-index: 100;
+        transition: all .4s;
+    }    
+    &__game-score-board {        
+        background-color: #4DD0E1;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        height: 58rem;
+        position: relative;
+    }
+    &__message-block {
+        position: absolute;
+        bottom: 20rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        transition: all .4s;
+        &-wrapper {
+            width: 85%;            
+        }
+    }
+    &__rolled {
+        position: absolute;
+        bottom: 13rem;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    &__player-current-score {
+        width: 100%;
+        position: absolute;
+        bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 85%;
+        }
+        &--label {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &--number {
+            width: 30%;
+        }
+    }
+    &__game-controls-block {
+        width: 20%;
+        background-color: #fff;
+        height: 70.5rem;
+        position: absolute;
+        top: -3rem;
+        box-shadow: $box-shadow-1;
+        z-index: 200;
+    }
+    &__dice-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3rem;
+    }
+    &__dice-item {
+        width: 80%;
+        transition: all .4s;
+    }
+    &__rule-info { 
+        position: absolute;
+        bottom: 35%;
+        width: 100%;
+        padding: 0 2rem;
+        transition: all .4s;
+        &-paragraph {
+            font-size: 1.5rem;
+            font-family: "Roboto Slab Light";            
+        }
+    }
+    &__game-control-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        bottom: 4rem;
+        width: 100%;
+    }
+}
+.player-1, .player-2 {
+    position: absolute;
+}
+.player-1 {
+    left: 0;
+}
+.player-2 {
+    right: 0
+}
