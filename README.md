@@ -14,7 +14,7 @@ This is a mini-project based on the [Pig Game](https://en.wikipedia.org/wiki/Pig
 
 ![](project-preview.jpg)
 
-Lite Site URL: [Live Demo](https://kennyestrella-dice-game-vanilla-javascript.netlify.app/)
+Lite Site URL: [Live Demo](https://kenny-estrella-dice-game-vanilla-javascript.netlify.app/)
 
 ###  Used tools
 <img width="22px" src="xd-plain.svg">
