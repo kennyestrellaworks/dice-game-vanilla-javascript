@@ -177,17 +177,15 @@ body {
 .boxed-element-1 {
   background-color: #00E676;
   border: 1rem solid #4BAF50;
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 
 .boxed-element-2 {
   background-color: #00695C;
-  padding: 2rem 0;
 }
 
 .boxed-element-2a {
   background-color: #009588;
-  padding: 2rem 0;
 }
 
 .btn__btn-primary {
@@ -225,10 +223,10 @@ body {
 .dice-game__wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 8rem;
+  margin-top: 4rem;
 }
 .dice-game__container {
-  width: 100rem;
+  width: 95rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -262,12 +260,12 @@ body {
 }
 .dice-game__game-score-board {
   background-color: #4DD0E1;
-  height: 58rem;
+  height: 54rem;
   position: relative;
 }
 .dice-game__message-block {
   position: absolute;
-  bottom: 20rem;
+  bottom: 15rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -278,7 +276,7 @@ body {
 }
 .dice-game__rolled {
   position: absolute;
-  bottom: 13rem;
+  bottom: 9rem;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -307,7 +305,7 @@ body {
 .dice-game__game-controls-block {
   width: 20%;
   background-color: #fff;
-  height: 70.5rem;
+  height: 67rem;
   position: absolute;
   top: -3rem;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
@@ -320,7 +318,7 @@ body {
   margin-top: 3rem;
 }
 .dice-game__dice-item {
-  width: 80%;
+  width: 65%;
   transition: all 0.4s;
 }
 .dice-game__rule-info {

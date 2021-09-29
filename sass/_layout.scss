@@ -2,10 +2,10 @@
     &__wrapper {
         display: flex;
         justify-content: center;
-        margin-top: 8rem;
+        margin-top: 4rem;
     }
     &__container {
-        width: 100rem;
+        width: 95rem;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -39,16 +39,12 @@
     }    
     &__game-score-board {        
         background-color: #4DD0E1;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
-        height: 58rem;
+        height: 54rem;
         position: relative;
     }
     &__message-block {
         position: absolute;
-        bottom: 20rem;
+        bottom: 15rem;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -59,7 +55,7 @@
     }
     &__rolled {
         position: absolute;
-        bottom: 13rem;
+        bottom: 9rem;
         display: flex;
         justify-content: center;
         width: 100%;
@@ -88,7 +84,7 @@
     &__game-controls-block {
         width: 20%;
         background-color: #fff;
-        height: 70.5rem;
+        height: 67rem;
         position: absolute;
         top: -3rem;
         box-shadow: $box-shadow-1;
@@ -101,7 +97,7 @@
         margin-top: 3rem;
     }
     &__dice-item {
-        width: 80%;
+        width: 65%;
         transition: all .4s;
     }
     &__rule-info { 
