@@ -20,4 +20,4 @@ Lite Site URL: [Live Demo](https://kenny-estrella-dice-game-vanilla-javascript.n
 <img width="22px" src="xd-plain.svg">
 
 ### Used technologies
-<img width="22px" src="html5-plain.svg"> <img width="22px" src="sass-original.svg"> <img width="22px" src="javascript-original.svg"> <img width="22px" src="npm-original-wordmark.svg">
+<img width="22px" src="html5-plain.svg"> <img width="22px" src="sass-original.svg"> <img width="22px" src="javascript-original.svg">
