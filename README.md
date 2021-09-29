@@ -1,6 +1,6 @@
 # Dice Game Vanilla JavaScript
 
-This is a mini-project based on the [Pig Game](https://en.wikipedia.org/wiki/Pig_(dice_game)).
+This is a mini-project based on the [Pig Game](https://en.wikipedia.org/wiki/Pig_(dice_game)). I didn't intend to make this responsive in mobile devices, since the goal is to practice JavaScript objects, arrays and the functionalities of the game.
 
 - You can select either 1 or 2 DICE to roll.
 - You can set the WINNING SCORE from 20 up to 100.
