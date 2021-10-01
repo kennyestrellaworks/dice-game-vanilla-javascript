@@ -14,10 +14,15 @@ This is a mini-project based on the [Pig Game](https://en.wikipedia.org/wiki/Pig
 
 ![](project-preview.jpg)
 
-Lite Site URL: [Live Demo](https://kenny-estrella-dice-game-vanilla-javascript.netlify.app/)
+Lite Site URL: [Live Demo](https://kennyestrella-dice-game-vanilla-javascript.netlify.app/)
 
 ###  Used tools
 <img width="22px" src="xd-plain.svg">
 
 ### Used technologies
 <img width="22px" src="html5-plain.svg"> <img width="22px" src="sass-original.svg"> <img width="22px" src="javascript-original.svg">
+
+<br />
+
+### Updates
+- Oct 1 2021, fixed responsive layout.

@@ -70,8 +70,16 @@ body {
   align-items: center;
   position: relative;
 }
+@media only screen and (max-width: 40.625em) {
+  .items-select {
+    justify-content: space-between;
+  }
+  .items-select:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
 .items-select__label, .items-select__dropdown-placeholder {
-  color: #009588;
+  color: #888888;
 }
 .items-select__dropdown-placeholder {
   display: inline-block;
@@ -80,10 +88,12 @@ body {
   text-transform: uppercase;
 }
 .items-select__dropdown-group {
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  background-color: #EFF3F5;
   padding: 0.6rem 1rem;
   margin-left: 2rem;
   transition: all 0.4s;
+  width: 12rem;
+  position: relative;
 }
 .items-select__dropdown-group--active {
   cursor: pointer;
@@ -96,15 +106,12 @@ body {
   fill: #fff;
 }
 .items-select__icon {
-  margin-left: 5rem;
-  position: relative;
+  position: absolute;
+  right: 1rem;
 }
 .items-select__icon svg {
-  fill: #009588;
+  fill: #888888;
   width: 1.5rem;
-  position: absolute;
-  top: 0.6rem;
-  right: 0rem;
 }
 
 .dropdown {
@@ -126,7 +133,7 @@ body {
   background-color: #fff;
   padding: 0.5rem 0;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-  color: #4DD0E1;
+  color: #888888;
 }
 .dropdown-1__items {
   list-style: none;
@@ -165,6 +172,11 @@ body {
   text-align: center;
   color: #fff;
 }
+@media only screen and (max-width: 40.625em) {
+  .heading-tertiary__heading {
+    font-size: 2.1rem;
+  }
+}
 
 .heading-secondary__heading {
   font-family: "Roboto Slab Bold";
@@ -179,6 +191,11 @@ body {
   border: 1rem solid #4BAF50;
   padding: 2rem 0;
 }
+@media only screen and (max-width: 40.625em) {
+  .boxed-element-1 {
+    padding: 1rem 0;
+  }
+}
 
 .boxed-element-2 {
   background-color: #00695C;
@@ -189,14 +206,13 @@ body {
 }
 
 .btn__btn-primary {
-  position: relative;
   border: none;
   font-family: "Roboto Slab Light";
   text-transform: uppercase;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
   padding: 1.5rem 0;
   font-size: 1.6rem;
-  width: 80%;
+  width: 100%;
   color: #00695C;
   background-size: 240%;
   background-position: 83%;
@@ -204,6 +220,17 @@ body {
 }
 .btn__btn-primary:not(:last-child) {
   margin-bottom: 1.3rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .btn__btn-primary:not(:last-child) {
+    margin-right: 1.3rem;
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 40.625em) {
+  .btn__btn-primary {
+    font-size: 1.3rem;
+  }
 }
 .btn__btn-primary-hover:hover {
   cursor: pointer;
@@ -239,37 +266,57 @@ body {
   display: flex;
   justify-content: space-between;
   background-color: #fff;
-  width: 55%;
+  width: 100%;
   padding: 2rem;
+}
+@media only screen and (max-width: 40.625em) {
+  .dice-game__initiators-wrapper {
+    flex-direction: column;
+    padding: 1rem;
+  }
 }
 .dice-game__game-block {
   display: flex;
-  margin-top: 6rem;
   position: relative;
 }
 .dice-game__game-block-wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: 40% 20% 40%;
   width: 100%;
-  justify-content: center;
   position: relative;
 }
+@media only screen and (max-width: 37.5em) {
+  .dice-game__game-block-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .dice-game__player-block {
-  width: 40%;
   z-index: 100;
   transition: all 0.4s;
 }
 .dice-game__game-score-board {
   background-color: #4DD0E1;
-  height: 54rem;
+  height: 45rem;
   position: relative;
+}
+@media only screen and (max-width: 40.625em) {
+  .dice-game__game-score-board {
+    height: 44rem;
+  }
 }
 .dice-game__message-block {
   position: absolute;
-  bottom: 15rem;
+  bottom: 13rem;
   width: 100%;
   display: flex;
   justify-content: center;
   transition: all 0.4s;
+}
+@media only screen and (max-width: 40.625em) {
+  .dice-game__message-block {
+    bottom: 12rem;
+  }
 }
 .dice-game__message-block-wrapper {
   width: 85%;
@@ -281,6 +328,11 @@ body {
   justify-content: center;
   width: 100%;
 }
+@media only screen and (max-width: 40.625em) {
+  .dice-game__rolled {
+    bottom: 7rem;
+  }
+}
 .dice-game__player-current-score {
   width: 100%;
   position: absolute;
@@ -288,10 +340,20 @@ body {
   display: flex;
   justify-content: center;
 }
+@media only screen and (max-width: 40.625em) {
+  .dice-game__player-current-score {
+    bottom: 0;
+  }
+}
 .dice-game__player-current-score-wrapper {
   display: flex;
   justify-content: space-between;
   width: 85%;
+}
+@media only screen and (max-width: 40.625em) {
+  .dice-game__player-current-score-wrapper {
+    width: 100%;
+  }
 }
 .dice-game__player-current-score--label {
   width: 70%;
@@ -303,54 +365,122 @@ body {
   width: 30%;
 }
 .dice-game__game-controls-block {
-  width: 20%;
   background-color: #fff;
-  height: 67rem;
-  position: absolute;
-  top: -3rem;
-  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
   z-index: 200;
+  display: grid;
+  padding: 0 2rem;
+  position: relative;
+}
+@media only screen and (max-width: 37.5em) {
+  .dice-game__game-controls-block {
+    position: absolute;
+    top: 446px;
+    width: 100%;
+    display: flex;
+    padding: 0;
+    height: 15rem;
+  }
 }
 .dice-game__dice-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 3rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .dice-game__dice-container {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    padding: 1.2rem;
+    position: absolute;
+    top: 0;
+  }
+}
+@media only screen and (max-width: 34.375em) {
+  .dice-game__dice-container {
+    width: 44%;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .dice-game__dice-container {
+    width: 49%;
+  }
+}
+@media only screen and (max-width: 28.125em) {
+  .dice-game__dice-container {
+    width: 54%;
+  }
 }
 .dice-game__dice-item {
-  width: 65%;
+  width: 72%;
   transition: all 0.4s;
+}
+@media only screen and (max-width: 40.625em) {
+  .dice-game__dice-item {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .dice-game__dice-item {
+    width: 30%;
+  }
 }
 .dice-game__rule-info {
   position: absolute;
-  bottom: 35%;
+  bottom: 43%;
   width: 100%;
   padding: 0 2rem;
-  transition: all 0.4s;
+}
+@media only screen and (max-width: 40.625em) {
+  .dice-game__rule-info {
+    bottom: 40%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .dice-game__rule-info {
+    width: 60%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.2rem 0;
+  }
 }
 .dice-game__rule-info-paragraph {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-family: "Roboto Slab Light";
 }
 .dice-game__game-control-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: absolute;
-  bottom: 4rem;
-  width: 100%;
+  bottom: 2rem;
+  padding: 0 2rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .dice-game__game-control-buttons {
+    display: flex;
+    top: 8.5rem;
+    background: #fff;
+    width: 100%;
+    bottom: initial;
+    padding: 1.5rem 1.5rem;
+  }
 }
 
-.player-1, .player-2 {
-  position: absolute;
+@media only screen and (max-width: 37.5em) {
+  .player-1 {
+    order: 1;
+    position: absolute;
+    left: 0;
+    width: 50%;
+  }
 }
 
-.player-1 {
-  left: 0;
-}
-
-.player-2 {
-  right: 0;
+@media only screen and (max-width: 37.5em) {
+  .player-2 {
+    order: 2;
+    position: absolute;
+    right: 0;
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

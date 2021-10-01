@@ -1,0 +1,289 @@
+// Viewport media quiries.
+// 1em = 16px assuming 16 is the font-size of the browser.
+@mixin mediaQuery($viewport) {
+    // 300px to 400px *************
+    @if $viewport == viewport300 { // 300px / 16px = 18.75em
+      @media only screen and (max-width: 18.75em) { @content; }
+    }
+    @if $viewport == viewport310 { // 310px / 16px = 19.375em
+      @media only screen and (max-width: 19.375em) { @content; }
+    }
+    @if $viewport == viewport320 { // 320px / 16px = 20em
+      @media only screen and (max-width: 20em) { @content; }
+    }
+    @if $viewport == viewport330 { // 330px / 16px = 20.625em
+      @media only screen and (max-width: 20.625em) { @content; }
+    }
+    @if $viewport == viewport340 { // 340px / 16px = 21.25em
+      @media only screen and (max-width: 21.25em) { @content; }
+    }
+    @if $viewport == viewport350 { // 350px / 16px = 21.875em
+      @media only screen and (max-width: 21.875em) { @content; }
+    }
+    @if $viewport == viewport360 { // 360px / 16px = 22.5em
+      @media only screen and (max-width: 22.5em) { @content; }
+    }
+    @if $viewport == viewport370 { // 370px / 16px = 23.125em
+      @media only screen and (max-width: 23.125em) { @content; }
+    }    
+    @if $viewport == viewport380 { // 380px / 16px = 23.75em
+      @media only screen and (max-width: 23.75em) { @content; }
+    }
+    @if $viewport == viewport390 { // 390px / 16px = 24.375em
+      @media only screen and (max-width: 24.375em) { @content; }
+    }
+    // 400px to 500px *************
+    @if $viewport == viewport400 { // 400px / 16px = 25em
+      @media only screen and (max-width: 25em) { @content; }
+    }
+    @if $viewport == viewport410 { // 410px / 16px = 25.625em
+      @media only screen and (max-width: 25.625em) { @content; }
+    }
+    @if $viewport == viewport420 { // 420px / 16px = 26.25em
+      @media only screen and (max-width: 26.25em) { @content; }
+    }
+    @if $viewport == viewport430 { // 430px / 16px = 26.875em
+      @media only screen and (max-width: 26.875em) { @content; }
+    }
+    @if $viewport == viewport440 { // 440px / 16px = 27.5em
+      @media only screen and (max-width: 27.5em) { @content; }
+    }
+    @if $viewport == viewport450 { // 450px / 16px = 28.125em
+      @media only screen and (max-width: 28.125em) { @content; }
+    }
+    @if $viewport == viewport460 { // 460px / 16px = 28.75em
+      @media only screen and (max-width: 28.75em) { @content; }
+    }
+    @if $viewport == viewport470 { // 470px / 16px = 29.375em
+      @media only screen and (max-width: 29.375em) { @content; }
+    }    
+    @if $viewport == viewport480 { // 480px / 16px = 30em
+      @media only screen and (max-width: 30em) { @content; }
+    }
+    @if $viewport == viewport490 { // 490px / 16px = 30.625em
+      @media only screen and (max-width: 30.625em) { @content; }
+    }
+    // 500px to 600px *************
+    @if $viewport == viewport500 { // 500px / 16px = 31.25em
+      @media only screen and (max-width: 31.25em) { @content; }
+    }
+    @if $viewport == viewport510 { // 510px / 16px = 31.875em
+      @media only screen and (max-width: 31.875em) { @content; }
+    }
+    @if $viewport == viewport520 { // 520px / 16px = 32.5em
+      @media only screen and (max-width: 32.5em) { @content; }
+    }
+    @if $viewport == viewport530 { // 530px / 16px = 33.125em
+      @media only screen and (max-width: 33.125em) { @content; }
+    }
+    @if $viewport == viewport540 { // 540px / 16px = 33.75em
+      @media only screen and (max-width: 33.75em) { @content; }
+    }
+    @if $viewport == viewport550 { // 550px / 16px = 34.375em
+      @media only screen and (max-width: 34.375em) { @content; }
+    }
+    @if $viewport == viewport560 { // 560px / 16px = 35em
+      @media only screen and (max-width: 35em) { @content; }
+    }
+    @if $viewport == viewport570 { // 570px / 16px = 35.625em
+      @media only screen and (max-width: 35.625em) { @content; }
+    }    
+    @if $viewport == viewport580 { // 580px / 16px = 36.25em
+      @media only screen and (max-width: 36.25em) { @content; }
+    }
+    @if $viewport == viewport590 { // 590px / 16px = 36.875em
+      @media only screen and (max-width: 36.875em) { @content; }
+    }
+    // 600px to 700px *************
+    @if $viewport == viewport600 { // 600px / 16px = 37.5em
+      @media only screen and (max-width: 37.5em) { @content; }
+    }
+    @if $viewport == viewport610 { // 610px / 16px = 38.125em
+      @media only screen and (max-width: 38.125em) { @content; }
+    }
+    @if $viewport == viewport620 { // 620px / 16px = 38.75em
+      @media only screen and (max-width: 38.75em) { @content; }
+    }
+    @if $viewport == viewport630 { // 630px / 16px = 39.375em
+      @media only screen and (max-width: 39.375em) { @content; }
+    }
+    @if $viewport == viewport640 { // 640px / 16px = 40em
+      @media only screen and (max-width: 40em) { @content; }
+    }
+    @if $viewport == viewport650 { // 650px / 16px = 40.625em
+      @media only screen and (max-width: 40.625em) { @content; }
+    }
+    @if $viewport == viewport660 { // 660px / 16px = 41.25em
+      @media only screen and (max-width: 41.25em) { @content; }
+    }
+    @if $viewport == viewport670 { // 670px / 16px = 41.875em
+      @media only screen and (max-width: 41.875em) { @content; }
+    }    
+    @if $viewport == viewport680 { // 680px / 16px = 42.5em
+      @media only screen and (max-width: 42.5em) { @content; }
+    }
+    @if $viewport == viewport690 { // 690px / 16px = 43.125em
+      @media only screen and (max-width: 43.125em) { @content; }
+    }
+    // 700px to 800px *************
+    @if $viewport == viewport700 { // 700px / 16px = 43.75em
+      @media only screen and (max-width: 43.75em) { @content; }
+    }
+    @if $viewport == viewport710 { // 710px / 16px = 44.375em
+      @media only screen and (max-width: 44.375em) { @content; }
+    }
+    @if $viewport == viewport720 { // 720px / 16px = 45em
+      @media only screen and (max-width: 45em) { @content; }
+    }
+    @if $viewport == viewport730 { // 730px / 16px = 45.625em
+      @media only screen and (max-width: 45.625em) { @content; }
+    }
+    @if $viewport == viewport740 { // 740px / 16px = 46.25em
+      @media only screen and (max-width: 46.25em) { @content; }
+    }
+    @if $viewport == viewport750 { // 750px / 16px = 46.875em
+      @media only screen and (max-width: 46.875em) { @content; }
+    }
+    @if $viewport == viewport760 { // 760px / 16px = 47.5em
+      @media only screen and (max-width: 47.5em) { @content; }
+    }
+    @if $viewport == viewport770 { // 770px / 16px = 48.125em
+      @media only screen and (max-width: 48.125em) { @content; }
+    }    
+    @if $viewport == viewport780 { // 780px / 16px = 48.75em
+      @media only screen and (max-width: 48.75em) { @content; }
+    }
+    @if $viewport == viewport790 { // 790px / 16px = 49.375em
+      @media only screen and (max-width: 49.375em) { @content; }
+    }
+    @if $viewport == viewport800 { // 800px / 16px = 50em
+      @media only screen and (max-width: 50em) { @content; }
+    }
+    // 800px to 900px *************
+    @if $viewport == viewport810 { // 810px / 16px = 50.625em
+      @media only screen and (max-width: 50.625em) { @content; }
+    }
+    @if $viewport == viewport820 { // 820px / 16px = 51.25em
+      @media only screen and (max-width: 51.25em) { @content; }
+    }
+    @if $viewport == viewport830 { // 830px / 16px = 51.875em
+      @media only screen and (max-width: 51.875em) { @content; }
+    }
+    @if $viewport == viewport840 { // 840px / 16px = 52.5em
+      @media only screen and (max-width: 52.5em) { @content; }
+    }
+    @if $viewport == viewport850 { // 850px / 16px = 53.125em
+      @media only screen and (max-width: 53.125em) { @content; }
+    }
+    @if $viewport == viewport860 { // 860px / 16px = 53.75em
+      @media only screen and (max-width: 53.75em) { @content; }
+    }
+    @if $viewport == viewport870 { // 870px / 16px = 54.375em
+      @media only screen and (max-width: 54.375em) { @content; }
+    }    
+    @if $viewport == viewport880 { // 880px / 16px = 55em
+      @media only screen and (max-width: 55em) { @content; }
+    }
+    @if $viewport == viewport890 { // 890px / 16px = 55.625em
+      @media only screen and (max-width: 55.625em) { @content; }
+    }
+    @if $viewport == viewport900 { // 900px / 16px = 56.25em
+      @media only screen and (max-width: 56.25em) { @content; }
+    }
+    // 900px to 1000px *************
+    @if $viewport == viewport910 { // 910px / 16px = 56.875em
+      @media only screen and (max-width: 56.875em) { @content; }
+    }
+    @if $viewport == viewport920 { // 920px / 16px = 57.5em
+      @media only screen and (max-width: 57.5em) { @content; }
+    }
+    @if $viewport == viewport930 { // 930px / 16px = 58.125em
+      @media only screen and (max-width: 58.125em) { @content; }
+    }
+    @if $viewport == viewport940 { // 940px / 16px = 58.75em
+      @media only screen and (max-width: 58.75em) { @content; }
+    }
+    @if $viewport == viewport950 { // 950px / 16px = 59.375em
+      @media only screen and (max-width: 59.375em) { @content; }
+    }
+    @if $viewport == viewport960 { // 960px / 16px = 60em
+      @media only screen and (max-width: 60em) { @content; }
+    }
+    @if $viewport == viewport970 { // 970px / 16px = 60.625em
+      @media only screen and (max-width: 60.625em) { @content; }
+    }    
+    @if $viewport == viewport980 { // 980px / 16px = 61.25em
+      @media only screen and (max-width: 61.25em) { @content; }
+    }
+    @if $viewport == viewport990 { // 990px / 16px = 61.875em
+      @media only screen and (max-width: 61.875em) { @content; }
+    }
+    @if $viewport == viewport1000 { // 1000px / 16px = 62.5em
+      @media only screen and (max-width: 62.5em) { @content; }
+    }
+    // 1000px to 1100px *************
+    @if $viewport == viewport1010 { // 1010px / 16px = 63.125em
+      @media only screen and (max-width: 63.125em) { @content; }
+    }
+    @if $viewport == viewport1020 { // 1020px / 16px = 63.75em
+      @media only screen and (max-width: 63.75em) { @content; }
+    }
+    @if $viewport == viewport1030 { // 1030px / 16px = 64.375em
+      @media only screen and (max-width: 64.375em) { @content; }
+    }
+    @if $viewport == viewport1040 { // 1040px / 16px = 65em
+      @media only screen and (max-width: 65em) { @content; }
+    }
+    @if $viewport == viewport1050 { // 1050px / 16px = 65.625em
+      @media only screen and (max-width: 65.625em) { @content; }
+    }
+    @if $viewport == viewport1060 { // 1060px / 16px = 66.25em
+      @media only screen and (max-width: 66.25em) { @content; }
+    }
+    @if $viewport == viewport1070 { // 1070px / 16px = 66.875em
+      @media only screen and (max-width: 66.875em) { @content; }
+    }    
+    @if $viewport == viewport1080 { // 1080px / 16px = 67.5em
+      @media only screen and (max-width: 67.5em) { @content; }
+    }
+    @if $viewport == viewport1090 { // 1090px / 16px = 68.125em
+      @media only screen and (max-width: 68.125em) { @content; }
+    }
+    @if $viewport == viewport1100 { // 1100px / 16px = 68.75em
+      @media only screen and (max-width: 68.75em) { @content; }
+    }
+    // 1100px to 1200px *************
+    @if $viewport == viewport1110 { // 1110px / 16px = 69.375em
+      @media only screen and (max-width: 69.375em) { @content; }
+    }
+    @if $viewport == viewport1120 { // 1120px / 16px = 70em
+      @media only screen and (max-width: 70em) { @content; }
+    }
+    @if $viewport == viewport1130 { // 1130px / 16px = 70.625em
+      @media only screen and (max-width: 70.625em) { @content; }
+    }
+    @if $viewport == viewport1140 { // 1140px / 16px = 71.25em
+      @media only screen and (max-width: 71.25em) { @content; }
+    }
+    @if $viewport == viewport1150 { // 1150px / 16px = 71.875em
+      @media only screen and (max-width: 71.875em) { @content; }
+    }
+    @if $viewport == viewport1160 { // 1160px / 16px = 72.5em
+      @media only screen and (max-width: 72.5em) { @content; }
+    }
+    @if $viewport == viewport1170 { // 1170px / 16px = 73.125em
+      @media only screen and (max-width: 73.125em) { @content; }
+    }    
+    @if $viewport == viewport1180 { // 1180px / 16px = 73.75em
+      @media only screen and (max-width: 73.75em) { @content; }
+    }
+    @if $viewport == viewport1190 { // 1190px / 16px = 74.375em
+      @media only screen and (max-width: 74.375em) { @content; }
+    }    
+    @if $viewport == viewport1199 { // 1199px / 16px = 74.9375em
+        @media only screen and (max-width: 74.9375em) { @content; }
+    }
+    @if $viewport == viewport1200 { // 1200px / 16px = 75em
+      @media only screen and (max-width: 75em) { @content; }
+    }    
+}

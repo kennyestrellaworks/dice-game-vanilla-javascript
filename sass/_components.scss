@@ -1,19 +1,26 @@
 // ITEMS SELECT
 .items-select {
     font-size: 1.6rem;
-    font-family: "Roboto Slab Bold";    
+    font-family: "Roboto Slab Bold";
     display: flex;
     align-items: center;
-    position: relative;    
-    &__label, &__dropdown-placeholder { color: $color-1c; }
+    position: relative;
+    @include mediaQuery(viewport650) { 
+        justify-content: space-between;
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+    &__label, &__dropdown-placeholder { color: $color-gray; }
     &__dropdown-placeholder { display: inline-block; }
     &__label { text-transform: uppercase; }
     &__dropdown-group { 
-        // border: 1px solid $color-1b; 
-        box-shadow: $box-shadow-2;
-        padding: .6rem 1rem;
+        background-color: $color-white-1;
+        padding: 0.6rem 1rem;
         margin-left: 2rem;
-        transition: all .4s;
+        transition: all 0.4s;
+        width: 12rem;
+        position: relative;
         &--active {
             cursor: pointer;
             background-color: $color-2d;            
@@ -23,14 +30,11 @@
         }
     }
     &__icon { 
-        margin-left: 5rem;
-        position: relative;
+        position: absolute;
+        right: 1rem;
         & svg { 
-            fill: $color-1c; 
+            fill: $color-gray;
             width: 1.5rem;
-            position: absolute;
-            top: .6rem;
-            right: 0rem;
         }
     }
 }
@@ -53,7 +57,7 @@
         background-color: $color-white;
         padding: .5rem 0;
         box-shadow: $box-shadow-2;
-        color: $color-1d;
+        color: $color-gray;
     } 
     &__items {
         list-style: none;
@@ -94,6 +98,9 @@
         font-size: 2.4rem;
         text-align: center;
         color: $color-white;
+        @include mediaQuery(viewport650) {
+            font-size: 2.1rem;
+        }
     }
 }
 .heading-secondary {
@@ -110,7 +117,10 @@
 .boxed-element-1 {
     background-color: $color-2a;
     border: 1rem solid $color-2b;
-    padding: 2rem 0;    
+    padding: 2rem 0;  
+    @include mediaQuery(viewport650) {
+        padding: 1rem 0;
+    }
 }
 .boxed-element-2 {
     background-color: $color-1b;
@@ -122,21 +132,27 @@
 // BUTTONS
 .btn {
     &__btn-primary {
-        position: relative;
-        border: none;        
+        border: none;
         font-family: "Roboto Slab Light";
         text-transform: uppercase;
         box-shadow: 0 0 1rem rgb(0 0 0 / 20%);
         padding: 1.5rem 0;
         font-size: 1.6rem;
-        width: 80%;
-        color: $color-1b;
+        width: 100%;
+        color: #00695C;
         background-size: 240%;
         background-position: 83%;
-        transition: all .4s;
+        transition: all 0.4s;
         &:not(:last-child) {
             margin-bottom: 1.3rem;
+            @include mediaQuery(viewport600) {
+                margin-right: 1.3rem;
+                margin-bottom: 0;
+            }
         }
+        @include mediaQuery(viewport650) {
+            font-size: 1.3rem;
+        }        
         &-hover {
             &:hover {
                 cursor: pointer;

@@ -18,39 +18,51 @@
         display: flex;
         justify-content: space-between;
         background-color: #fff;
-        width: 55%;
+        width: 100%;
         padding: 2rem;
+        @include mediaQuery(viewport650) {
+            flex-direction: column;
+            padding: 1rem;
+        }
     }
     &__game-block {
         display: flex;
-        margin-top: 6rem;
         position: relative;
         &-wrapper {
-            display: flex;
+            display: grid;
+            grid-template-columns: 40% 20% 40%;
             width: 100%;
-            justify-content: center;
             position: relative;
+            @include mediaQuery(viewport600) {
+                display: flex;
+                flex-direction: column;
+            }
         }
     }
     &__player-block {
-        width: 40%;
         z-index: 100;
-        transition: all .4s;
+        transition: all .4s;        
     }    
     &__game-score-board {        
         background-color: #4DD0E1;
-        height: 54rem;
+        height: 45rem;
         position: relative;
+        @include mediaQuery(viewport650) {
+            height: 44rem;
+        }
     }
     &__message-block {
         position: absolute;
-        bottom: 15rem;
+        bottom: 13rem;
         width: 100%;
         display: flex;
         justify-content: center;
         transition: all .4s;
+        @include mediaQuery(viewport650) {
+            bottom: 12rem; 
+        }
         &-wrapper {
-            width: 85%;            
+            width: 85%;                  
         }
     }
     &__rolled {
@@ -59,6 +71,9 @@
         display: flex;
         justify-content: center;
         width: 100%;
+        @include mediaQuery(viewport650) {
+            bottom: 7rem;
+        }
     }
     &__player-current-score {
         width: 100%;
@@ -66,10 +81,16 @@
         bottom: 2rem;
         display: flex;
         justify-content: center;
+        @include mediaQuery(viewport650) {
+            bottom: 0;
+        }
         &-wrapper {
             display: flex;
             justify-content: space-between;
             width: 85%;
+            @include mediaQuery(viewport650) {
+                width: 100%;
+            }
         }
         &--label {
             width: 70%;
@@ -82,50 +103,93 @@
         }
     }
     &__game-controls-block {
-        width: 20%;
         background-color: #fff;
-        height: 67rem;
-        position: absolute;
-        top: -3rem;
-        box-shadow: $box-shadow-1;
         z-index: 200;
+        display: grid;
+        padding: 0 2rem;
+        position: relative;        
+        @include mediaQuery(viewport600) {            
+            position: absolute;
+            top: 446px;
+            width: 100%;
+            display: flex;
+            padding: 0;
+            height: 15rem;
+        }
     }
     &__dice-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 3rem;
+        @include mediaQuery(viewport600) {
+            width: 40%;
+            display: flex;
+            flex-direction: row;
+            padding: 1.2rem;
+            position: absolute;
+            top: 0;            
+        }
+        @include mediaQuery(viewport550) { width: 44%; }
+        @include mediaQuery(viewport500) { width: 49%; }
+        @include mediaQuery(viewport450) { width: 54%; }
     }
     &__dice-item {
-        width: 65%;
+        width: 72%;
         transition: all .4s;
+        @include mediaQuery(viewport650) {
+            width: 100%;
+        }
+        @include mediaQuery(viewport600) {
+            width: 30%;
+        }
     }
     &__rule-info { 
         position: absolute;
-        bottom: 35%;
+        bottom: 43%;
         width: 100%;
         padding: 0 2rem;
-        transition: all .4s;
+        @include mediaQuery(viewport650) {
+            bottom: 40%;
+        }
+        @include mediaQuery(viewport600) {
+            width: 60%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 1.2rem 0;
+        }
         &-paragraph {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-family: "Roboto Slab Light";            
         }
     }
     &__game-control-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         position: absolute;
-        bottom: 4rem;
-        width: 100%;
+        bottom: 2rem;
+        padding: 0 2rem;
+        @include mediaQuery(viewport600) {
+            display: flex;
+            top: 8.5rem;
+            background: #fff;
+            width: 100%;
+            bottom: initial;
+            padding: 1.5rem 1.5rem;
+        }
     }
 }
-.player-1, .player-2 {
-    position: absolute;
-}
 .player-1 {
-    left: 0;
+    @include mediaQuery(viewport600) {
+        order: 1;
+        position: absolute;
+        left: 0;
+        width: 50%;
+    }
 }
 .player-2 {
-    right: 0
+    @include mediaQuery(viewport600) {
+        order: 2;
+        position: absolute;
+        right: 0;
+        width: 50%;
+    }
 }
