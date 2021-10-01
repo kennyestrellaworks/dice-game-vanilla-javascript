@@ -134,6 +134,7 @@ class UI {
         }
     }
     static disableEnableItemSelect(task, element) {
+        // Disable or enable 'itemSelect' elements.
         for (let i = 0; i < element.length; i++) {
             if (task == 'disable') { element[i].classList.remove('items-select__dropdown-enable') }
             if (task == 'enable') { element[i].classList.add('items-select__dropdown-enable') }
@@ -160,6 +161,19 @@ class UI {
                 element[i].classList.remove('fade')             
             }
         }
+    }
+    static displayMessageBlock(messageBlock) {
+        let message = `<div class="boxed-element-1 dice-game__message-block-wrapper">
+            <div class="heading-tertiary">
+                <h1 class="heading-tertiary__heading">Congratulations!</h1>                            
+            </div>
+            <div class="heading-secondary">
+                <h1 class="heading-secondary__heading">you win!</h1>                            
+            </div>                                
+        </div>
+        `
+        messageBlock.innerHTML = message
+        messageBlock.classList.remove('hide')  
     }
     static createMainScore(currentPlayer) {
         // The 'currentScore' is added to 'mainScore' when a player clicks 'HOLD DICE'.
@@ -198,37 +212,39 @@ class UI {
         if (game.numberOfDice == 1) {
             DOMStrings.diceGameDiceItem.src = `images/dice-${number}.jpg`
             DOMStrings.diceGameDiceItem.alt = `Dice ${number}` 
-            setTimeout(() => {
-                DOMStrings.diceGameDiceItem.classList.remove('hide')
-            }, 100);
+            this.hideSomething(DOMStrings.diceGameDiceItem, 100)
         } else {
             DOMStrings.diceGameDiceItem[index].src = `images/dice-${number}.jpg`
             DOMStrings.diceGameDiceItem[index].alt = `Dice ${number}`
-            setTimeout(() => {
-                DOMStrings.diceGameDiceItem[index].classList.remove('hide')
-            }, 100); 
+            this.hideSomething(DOMStrings.diceGameDiceItem[index], 100)
         }
     }
     static showDefaultDice() {
         if (game.numberOfDice == 1) { 
+            // When 'game.numberOfDice == 1' that means 1 dice is selected. Therefore, we generate 
+            // 1 dice.
             DOMStrings.diceGameDiceItem = document.querySelector('.dice-game__dice-item')
             DOMStrings.diceGameDiceItem.src = `images/dice-${game.numberOfDice}.jpg`
             DOMStrings.diceGameDiceItem.alt = `Dice ${game.numberOfDice}`
-            setTimeout(() => {
-                DOMStrings.diceGameDiceItem.classList.remove('hide')
-            }, 100);
+            this.hideSomething(DOMStrings.diceGameDiceItem, 100)
         } else { 
             DOMStrings.diceGameDiceItem = document.querySelectorAll('.dice-game__dice-item')
             for (let i = 0; i < DOMStrings.diceGameDiceItem.length; i++) {
                 DOMStrings.diceGameDiceItem[i].src = `images/dice-${setup.dangerRoll[i].dangerRollValue}.jpg`
                 DOMStrings.diceGameDiceItem[i].alt = `Dice ${setup.dangerRoll[i].dangerRollValue}`
-                setTimeout(() => {
-                    DOMStrings.diceGameDiceItem[i].classList.remove('hide')
-                }, 100);
+                this.hideSomething(DOMStrings.diceGameDiceItem[i], 100)
             }
         }
     }
+    static hideSomething(DOMString, delay) {
+        let DOM = DOMString
+        setTimeout(() => {
+            DOM.classList.remove('hide')
+        }, delay);
+    }
     static prepareDice() {
+        // We create a 'string literal' that doesn't have an 'src' attribute yet showing an actual
+        // dice image.
         let diceItem = ''
         for (let i = 0; i < game.numberOfDice; i++) {
             diceItem += `
@@ -285,6 +301,8 @@ class Game {
         return sumOfArrayItems
     }
     static getCurrentPlayer() {
+        // We look through 'setup.players' and see if 'game.activePlayer' is equal to
+        // 'setup.player[i].name' where [i] represents the current index.
         let currentPlayer = 0
         for (let i = 0; i < setup.players.length; i++) {
             if (game.activePlayer == setup.players[i].name) {
@@ -294,12 +312,15 @@ class Game {
         return currentPlayer
     }
     static getPlayerDOMS(player) {
+        // Player 1 and 2 block has the same DOMs, the difference is the class 'player-1' or 'player-2'
+        // which is the 'player.name' property and value from 'setup.player' object.
         let playerBlockElement = ''
         let currentScoreElement = ''
         let rolledElement = ''
         let mainScoreElement = ''
         let messageBlockElement = ''
         for (let i = 0; i < DOMStrings.diceGamePlayerBlock.length; i++) {
+            // We traverse through the DOM and get what is needed.
             if (DOMStrings.diceGamePlayerBlock[i].classList.contains(player.name)) {
                 playerBlockElement = DOMStrings.diceGamePlayerBlock[i]
                 currentScoreElement = playerBlockElement.children[1].children[3].children[0].children[1].children[0].children[0]
@@ -310,12 +331,15 @@ class Game {
         }
         return {playerBlockElement, currentScoreElement, rolledElement, mainScoreElement, messageBlockElement}
     }
-    static doNumberValidity(randomNumber) {
-        if (randomNumber != game.dangerRollValue) {
+    static doNumberValidity(number) {
+        // In each dice selection, 1 or 2, there is a corresponding 'dangerRollValue' which we use to see if
+        // the 'number' passed in is valid or not.
+        if (number != game.dangerRollValue) {
             return true
         } else { return false }
     }
     static doRandomNumber() {
+        // We generate a 'randomNumber' based on the 'game.diceSides' value.
         let randomNumber = Math.floor(Math.random() * game.diceSides) + 1
         return randomNumber
     }
@@ -329,6 +353,7 @@ class Game {
         }
     }
     static defaultState() {
+        // Default values we initialize when the page is loaded.
         game.activePlayer = 'player-1'
         game.otherPlayer = 'player-2'
         game.oldActivePlayer = 'player-1'
@@ -352,9 +377,10 @@ class Game {
 
 // ROLL DICE starts.
 DOMStrings.btnRollDice.addEventListener('click', function() {
-    const currentPlayer = Game.getCurrentPlayer()
-    const currentPlayerDOMS = Game.getPlayerDOMS(currentPlayer)
+    const currentPlayer = Game.getCurrentPlayer() // Getting the 'activePlayer'.
+    const currentPlayerDOMS = Game.getPlayerDOMS(currentPlayer) // Getting the 'activePlayer' DOMs.
     if (game.gamePlay == true) {
+        // When 'game.gamePlay == true', we can roll the dice.
         let randomNumber = 0
         let sumOfRandomNumbers = 0   
         let isNumberValied = '' 
@@ -407,8 +433,8 @@ DOMStrings.btnRollDice.addEventListener('click', function() {
 
 // HOLD DICE starts.
 DOMStrings.btnHoldDice.addEventListener('click', function() {
-    const currentPlayer = Game.getCurrentPlayer()
-    const currentPlayerDOMS = Game.getPlayerDOMS(currentPlayer)
+    const currentPlayer = Game.getCurrentPlayer() // Getting the 'activePlayer'.
+    const currentPlayerDOMS = Game.getPlayerDOMS(currentPlayer) // Getting the 'activePlayer' DOMs
     currentPlayer.mainScore += currentPlayer.currentScore
     currentPlayerDOMS.mainScoreElement.innerHTML = currentPlayer.mainScore
     if (currentPlayer.mainScore < game.winningScore) {
@@ -417,7 +443,8 @@ DOMStrings.btnHoldDice.addEventListener('click', function() {
         UI.checkActivePlayer()
     } else {
         // There's a winner
-        currentPlayerDOMS.messageBlockElement.classList.remove('hide')
+        //currentPlayerDOMS.messageBlockElement.classList.remove('hide')
+        UI.displayMessageBlock(currentPlayerDOMS.messageBlockElement)
         UI.disableEnableButtons('disable', [DOMStrings.btnRollDice, DOMStrings.btnHoldDice])
         UI.disableEnableItemSelect('disable', DOMStrings.itemsSelectDropdown)
         UI.removeButtonHover()
@@ -426,6 +453,7 @@ DOMStrings.btnHoldDice.addEventListener('click', function() {
 })
 // HOLD DICE ends.
 
+// NEW GAME starts.
 DOMStrings.btnNewGame.addEventListener('click', function() {
     UI.disableEnableButtons('enable', [DOMStrings.btnRollDice, DOMStrings.btnHoldDice])
     UI.disableEnableItemSelect('enable', DOMStrings.itemsSelectDropdown)
