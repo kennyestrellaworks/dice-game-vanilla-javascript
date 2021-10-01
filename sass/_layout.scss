@@ -3,6 +3,10 @@
         display: flex;
         justify-content: center;
         margin-top: 4rem;
+        transition: all .4s;
+        @include heightQuery(viewportHeight560) {
+            margin-top: 0;
+        }
     }
     &__container {
         width: 95rem;
@@ -20,7 +24,7 @@
         background-color: #fff;
         width: 100%;
         padding: 2rem;
-        @include mediaQuery(viewport650) {
+        @include widthQuery(viewportWidth650) {
             flex-direction: column;
             padding: 1rem;
         }
@@ -33,7 +37,7 @@
             grid-template-columns: 40% 20% 40%;
             width: 100%;
             position: relative;
-            @include mediaQuery(viewport600) {
+            @include widthQuery(viewportWidth600) {
                 display: flex;
                 flex-direction: column;
             }
@@ -47,9 +51,12 @@
         background-color: #4DD0E1;
         height: 45rem;
         position: relative;
-        @include mediaQuery(viewport650) {
-            height: 44rem;
-        }
+        @include widthQuery(viewportWidth650) { height: 44rem; }        
+        @include widthQuery(viewportWidth550) { height: 40rem; }
+        @include widthQuery(viewportWidth400) { height: 39rem; }
+
+        @include heightQuery(viewportHeight640) { height: 36rem; }
+        @include heightQuery(viewportHeight600) { height: 33rem; }
     }
     &__message-block {
         position: absolute;
@@ -58,9 +65,9 @@
         display: flex;
         justify-content: center;
         transition: all .4s;
-        @include mediaQuery(viewport650) {
-            bottom: 12rem; 
-        }
+        @include widthQuery(viewportWidth650) { bottom: 12rem; }
+
+        @include heightQuery(viewportHeight600) { bottom: 9rem; }
         &-wrapper {
             width: 85%;                  
         }
@@ -71,9 +78,9 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        @include mediaQuery(viewport650) {
-            bottom: 7rem;
-        }
+        @include widthQuery(viewportWidth650) { bottom: 7rem; }
+        @include widthQuery(viewportWidth500) { bottom: 6rem; }
+        @include widthQuery(viewportWidth360) { bottom: 5rem; }
     }
     &__player-current-score {
         width: 100%;
@@ -81,14 +88,14 @@
         bottom: 2rem;
         display: flex;
         justify-content: center;
-        @include mediaQuery(viewport650) {
+        @include widthQuery(viewportWidth650) {
             bottom: 0;
         }
         &-wrapper {
             display: flex;
             justify-content: space-between;
             width: 85%;
-            @include mediaQuery(viewport650) {
+            @include widthQuery(viewportWidth650) {
                 width: 100%;
             }
         }
@@ -108,20 +115,27 @@
         display: grid;
         padding: 0 2rem;
         position: relative;        
-        @include mediaQuery(viewport600) {            
+        @include widthQuery(viewportWidth600) {            
             position: absolute;
-            top: 446px;
+            top: 44.6rem;
             width: 100%;
             display: flex;
             padding: 0;
             height: 15rem;
         }
+        @include widthQuery(viewportWidth600) { top: 50.1rem; }
+        @include widthQuery(viewportWidth560) { top: 48.7rem; }
+        @include widthQuery(viewportWidth550) { top: 44.7rem; }
+        @include widthQuery(viewportWidth400) { top: 43.7rem; }
+
+        @include heightQuery(viewportHeight640) { top: 40.8rem; }
+        @include heightQuery(viewportHeight600) { top: 37.8rem; }
     }
     &__dice-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        @include mediaQuery(viewport600) {
+        @include widthQuery(viewportWidth600) {
             width: 40%;
             display: flex;
             flex-direction: row;
@@ -129,17 +143,17 @@
             position: absolute;
             top: 0;            
         }
-        @include mediaQuery(viewport550) { width: 44%; }
-        @include mediaQuery(viewport500) { width: 49%; }
-        @include mediaQuery(viewport450) { width: 54%; }
+        @include widthQuery(viewportWidth550) { width: 44%; }
+        @include widthQuery(viewportWidth500) { width: 49%; }
+        @include widthQuery(viewportWidth450) { width: 54%; }
     }
     &__dice-item {
         width: 72%;
         transition: all .4s;
-        @include mediaQuery(viewport650) {
+        @include widthQuery(viewportWidth650) {
             width: 100%;
         }
-        @include mediaQuery(viewport600) {
+        @include widthQuery(viewportWidth600) {
             width: 30%;
         }
     }
@@ -148,15 +162,15 @@
         bottom: 43%;
         width: 100%;
         padding: 0 2rem;
-        @include mediaQuery(viewport650) {
+        @include widthQuery(viewportWidth650) {
             bottom: 40%;
         }
-        @include mediaQuery(viewport600) {
+        @include widthQuery(viewportWidth600) {
             width: 60%;
             position: absolute;
             top: 0;
             right: 0;
-            padding: 1.2rem 0;
+            padding: 1.2rem 1.2rem;
         }
         &-paragraph {
             font-size: 1.3rem;
@@ -167,7 +181,7 @@
         position: absolute;
         bottom: 2rem;
         padding: 0 2rem;
-        @include mediaQuery(viewport600) {
+        @include widthQuery(viewportWidth600) {
             display: flex;
             top: 8.5rem;
             background: #fff;
@@ -175,10 +189,11 @@
             bottom: initial;
             padding: 1.5rem 1.5rem;
         }
+        @include heightQuery(viewportHeight600) { top: 7.5rem; }
     }
 }
 .player-1 {
-    @include mediaQuery(viewport600) {
+    @include widthQuery(viewportWidth600) {
         order: 1;
         position: absolute;
         left: 0;
@@ -186,7 +201,7 @@
     }
 }
 .player-2 {
-    @include mediaQuery(viewport600) {
+    @include widthQuery(viewportWidth600) {
         order: 2;
         position: absolute;
         right: 0;
