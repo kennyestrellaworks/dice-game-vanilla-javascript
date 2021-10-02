@@ -293,6 +293,12 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin: 0 2rem;
+}
+@media only screen and (max-width: 34.375em) {
+  .dice-game__container {
+    margin: 0;
+  }
 }
 .dice-game__initiators {
   display: flex;
@@ -348,7 +354,7 @@ body {
 }
 @media only screen and (max-width: 25em) {
   .dice-game__game-score-board {
-    height: 39rem;
+    height: 34rem;
   }
 }
 .dice-game__message-block {
@@ -362,6 +368,11 @@ body {
 @media only screen and (max-width: 40.625em) {
   .dice-game__message-block {
     bottom: 12rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .dice-game__message-block {
+    bottom: 9rem;
   }
 }
 .dice-game__message-block-wrapper {
@@ -454,7 +465,7 @@ body {
 }
 @media only screen and (max-width: 25em) {
   .dice-game__game-controls-block {
-    top: 43.8rem;
+    top: 38.8rem;
   }
 }
 .dice-game__dice-container {
@@ -538,6 +549,11 @@ body {
     width: 100%;
     bottom: initial;
     padding: 1.5rem 1.5rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .dice-game__game-control-buttons {
+    top: 7.5rem;
   }
 }
 
