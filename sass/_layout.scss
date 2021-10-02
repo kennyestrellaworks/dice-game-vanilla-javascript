@@ -4,9 +4,7 @@
         justify-content: center;
         margin-top: 4rem;
         transition: all .4s;
-        @include heightQuery(viewportHeight560) {
-            margin-top: 0;
-        }
+        @include widthQuery(viewportWidth400) { margin: 0 }
     }
     &__container {
         width: 95rem;
@@ -51,9 +49,6 @@
         background-color: #4DD0E1;
         height: 45rem;
         position: relative;
-        @include heightQuery(viewportHeight640) { height: 36rem; }
-        @include heightQuery(viewportHeight600) { height: 33rem; }
-
         @include widthQuery(viewportWidth650) { height: 44rem; }        
         @include widthQuery(viewportWidth550) { height: 40rem; }
         @include widthQuery(viewportWidth400) { height: 39rem; }        
@@ -65,12 +60,8 @@
         display: flex;
         justify-content: center;
         transition: all .4s;
-        @include heightQuery(viewportHeight600) { bottom: 9rem; }
-
         @include widthQuery(viewportWidth650) { bottom: 12rem; }
-        &-wrapper {
-            width: 85%;                  
-        }
+        &-wrapper { width: 85%; }
     }
     &__rolled {
         position: absolute;
@@ -114,20 +105,20 @@
         z-index: 200;
         display: grid;
         padding: 0 2rem;
-        position: relative;    
-        @include heightQuery(viewportHeight640) { top: 40.8rem; }
-        @include heightQuery(viewportHeight600) { top: 37.8rem; }
+        position: relative;
 
         @include widthQuery(viewportWidth600) {            
             position: absolute;
-            top: 39.2rem;
+            top: 50.2rem;
             width: 100%;
             display: flex;
             padding: 0;
             height: 15rem;
         }                
-        @include widthQuery(viewportWidth560) { top: 37.7rem; }
-        @include widthQuery(viewportWidth500) { top: 37.9rem; }    
+        @include widthQuery(viewportWidth560) { top: 48.7rem; }
+        @include widthQuery(viewportWidth550) { top: 44.7rem; }
+        @include widthQuery(viewportWidth500) { top: 44.8rem; }    
+        @include widthQuery(viewportWidth400) { top: 43.8rem; }
     }
     &__dice-container {
         display: flex;
@@ -179,7 +170,6 @@
         position: absolute;
         bottom: 2rem;
         padding: 0 2rem;
-        @include heightQuery(viewportHeight600) { top: 7.5rem; }
         
         @include widthQuery(viewportWidth600) {
             display: flex;

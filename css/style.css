@@ -283,9 +283,9 @@ body {
   margin-top: 4rem;
   transition: all 0.4s;
 }
-@media only screen and (max-height: 35em) {
+@media only screen and (max-width: 25em) {
   .dice-game__wrapper {
-    margin-top: 0;
+    margin: 0;
   }
 }
 .dice-game__container {
@@ -336,16 +336,6 @@ body {
   height: 45rem;
   position: relative;
 }
-@media only screen and (max-height: 40em) {
-  .dice-game__game-score-board {
-    height: 36rem;
-  }
-}
-@media only screen and (max-height: 37.5em) {
-  .dice-game__game-score-board {
-    height: 33rem;
-  }
-}
 @media only screen and (max-width: 40.625em) {
   .dice-game__game-score-board {
     height: 44rem;
@@ -368,11 +358,6 @@ body {
   display: flex;
   justify-content: center;
   transition: all 0.4s;
-}
-@media only screen and (max-height: 37.5em) {
-  .dice-game__message-block {
-    bottom: 9rem;
-  }
 }
 @media only screen and (max-width: 40.625em) {
   .dice-game__message-block {
@@ -442,20 +427,10 @@ body {
   padding: 0 2rem;
   position: relative;
 }
-@media only screen and (max-height: 40em) {
-  .dice-game__game-controls-block {
-    top: 40.8rem;
-  }
-}
-@media only screen and (max-height: 37.5em) {
-  .dice-game__game-controls-block {
-    top: 37.8rem;
-  }
-}
 @media only screen and (max-width: 37.5em) {
   .dice-game__game-controls-block {
     position: absolute;
-    top: 39.2rem;
+    top: 50.2rem;
     width: 100%;
     display: flex;
     padding: 0;
@@ -464,12 +439,22 @@ body {
 }
 @media only screen and (max-width: 35em) {
   .dice-game__game-controls-block {
-    top: 37.7rem;
+    top: 48.7rem;
+  }
+}
+@media only screen and (max-width: 34.375em) {
+  .dice-game__game-controls-block {
+    top: 44.7rem;
   }
 }
 @media only screen and (max-width: 31.25em) {
   .dice-game__game-controls-block {
-    top: 37.9rem;
+    top: 44.8rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .dice-game__game-controls-block {
+    top: 43.8rem;
   }
 }
 .dice-game__dice-container {
@@ -544,11 +529,6 @@ body {
   position: absolute;
   bottom: 2rem;
   padding: 0 2rem;
-}
-@media only screen and (max-height: 37.5em) {
-  .dice-game__game-control-buttons {
-    top: 7.5rem;
-  }
 }
 @media only screen and (max-width: 37.5em) {
   .dice-game__game-control-buttons {
