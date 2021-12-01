@@ -16,12 +16,32 @@ const DOMStrings = {
 
 const setup = {
     initiator: [
-        { name: 'dice', content: [1, 2], prefix: 'Dice' },
-        { name: 'winning-score', content: [20, 40, 60, 80, 100], prefix: 'Up to' }
+        { 
+            name: 'dice', 
+            content: [1, 2], 
+            prefix: 'Dice' 
+        },
+        { 
+            name: 'winning-score', 
+            content: [20, 40, 60, 80, 100], 
+            prefix: 'Up to' 
+        }
     ],
     dangerRoll: [
-        { name: 'dice-1', dangerRollValue: 1, rule: function() { return `Roll ${this.dangerRollValue}, current score becomes 0 and it'll be next player's turn.` } },
-        { name: 'dice-2', dangerRollValue: 6, rule: function() { return `Roll a sum of ${this.dangerRollValue}, current score becomes 0 and it'll be next player's turn.` } }
+        { 
+            name: 'dice-1', 
+            dangerRollValue: 1, 
+            rule: function() { 
+                return `Roll ${this.dangerRollValue}, current score becomes 0 and it'll be next player's turn.` 
+            } 
+        },
+        { 
+            name: 'dice-2', 
+            dangerRollValue: 6, 
+            rule: function() { 
+                return `Roll a sum of ${this.dangerRollValue}, current score becomes 0 and it'll be next player's turn.` 
+            } 
+        }
     ],
     players: [
         { 
