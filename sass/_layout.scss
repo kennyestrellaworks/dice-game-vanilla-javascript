@@ -2,7 +2,7 @@
     &__wrapper {
         display: flex;
         justify-content: center;
-        margin-top: 4rem;
+        padding-top: 4rem;
         transition: all .4s;
         @include widthQuery(viewportWidth400) { margin: 0 }
     }
